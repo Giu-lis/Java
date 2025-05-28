@@ -1,27 +1,42 @@
 /******************************************************************************
-Crie um programa que solicite ao usuário um número e exiba a tabuada desse número utilizando um laço de repetição. Utilize for.
-
+4. Crie um algoritmo que leia uma matriz 3x3 e crie uma nova matriz que seja a matriz
+transposta da primeira (troque as linhas por colunas)
 *******************************************************************************/
 import java.util.Scanner;
-
-public class Ex4 {
-
-    public static void main (String[] args) {
-        int i;
-        int resultado;
-        int num;
-        Scanner ler;
-
-        ler = new Scanner(System.in);
-
-        System.out.print("Digite o número: ");
-        num = ler.nextInt();
-
-        for (i = 0; i <= 10; i++) { 
-            resultado = num * i;
-            System.out.println(num + " x " + i + " = " + resultado);
-        }
-
-        ler.close();
-    }
+public class Ex4
+{
+	public static void main(String[] args) {
+	    int linha =3, coluna =3;
+		int [][] matriz = {
+		    
+		    {1, 2, 3},
+		    {4, 5, 6},
+		    {7, 8, 9}
+		    
+		};
+		
+		
+		ij(matriz);
+		
+		int[][] transposta = new int [coluna][linha];
+		for (int i = 0; i < linha; i++) {
+		    for (int j = 0; j < coluna; j++) {
+		        transposta[j][i] = matriz [i][j];
+		    }
+		}
+		
+		ij(transposta);
+	 }
+	 
+	 public static void ij(int[][] matriz){
+	     System.out.println("A matriz é: ");
+	     for (int[]linha : matriz){
+	         for (int coluna : linha){
+	             System.out.print(coluna + " ");
+	         }
+	         
+	        System.out.println();
+	     }
+	 }
 }
+
