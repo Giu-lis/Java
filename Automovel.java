@@ -1,31 +1,28 @@
-package Modificador;
+package ativheranca;
 
-public class Automovel {
-    private String cor;
-    private String nome;
-    private int velocidade;
+class Automovel extends Veiculo {
+    private int numeroDePortas;
+    private String motor;
 
-    public String getCor() {
-        return cor;
+    public Automovel(String marca, String modelo, int ano, String cor, int numeroDePortas, String motor) {
+        super(marca, modelo, ano, cor);
+        this.numeroDePortas = numeroDePortas;
+        this.motor = motor;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
+    public int getNumeroDePortas() {
+        return numeroDePortas;
     }
 
-    public String getNome() {
-        return nome;
+    public void setNumeroDePortas(int numeroDePortas) {
+        this.numeroDePortas = numeroDePortas;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getMotor() {
+        return motor;
     }
 
-    public int getVelocidade() {
-        return velocidade;
-    }
-
-    public void setVelocidade(int velocidade) {
-        this.velocidade = velocidade;
+    public void setMotor(String motor) {
+        this.motor = motor;
     }
 }
